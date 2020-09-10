@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Title -->
+    <title>Bootstrap Datatables | Nova - Responsive WebApp UI Kit</title>
+
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+    <link href="../../assets/vendor/nova-icons/nova-icons.css" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="../../assets/vendor/animate.css/animate.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="../../assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/prism.css">
+
+    <!-- CSS Nova Template -->
+    <link rel="stylesheet" href="../../assets/css/theme.css">
+
+    <!-- CSS Nova Doc -->
+    <link rel="stylesheet" href="../assets/css/docs.css">
+  </head>
+
+  <body class="bg-gray has-sidebar has-fixed-sidebar-and-header">
+    <header class="header header-light bg-white">
+      <nav class="navbar flex-nowrap p-0">
+        <div class="navbar-brand-wrapper d-flex align-items-center col-auto">
+          <a class="navbar-brand navbar-brand-mobile" href="../../demo-crypto/dashboards/index.html">
+            <img class="img-fluid w-100" src="../../assets/img/logo-mini.png" alt="Nova">
+          </a>
+
+          <a class="navbar-brand navbar-brand-desktop" href="../../demo-crypto/dashboards/index.html">
+            <img class="side-nav-show-on-closed" src="../../assets/img/logo-mini.png" alt="Nova" style="width: 41px; height: 33px;">
+            <img class="side-nav-hide-on-closed" src="../../assets/img/logo.png" alt="Nova" style="width: 130px; height: 33px;">
+          </a>
+        </div>
+
+        <div class="header-content col px-md-3">
+          <div class="d-flex align-items-center">
+            <a class="js-side-nav header-invoker d-flex mr-md-2 d-lg-none" href="#"
+               data-close-invoker="#sidebarClose"
+               data-target="#sidebar"
+               data-target-wrapper="body">
+              <i class="nova-align-left"></i>
+            </a>
+
+            <div class="js-header-search ml-lg-2"
+                 data-search-target="#headerSearchResults"
+                 data-search-mobile-invoker="#headerSearchMobileInvoker"
+                 data-search-form="#headerSearchForm"
+                 data-search-field="#headerSearchField">
+              <a id="headerSearchMobileInvoker" class="header-search-invoker header-invoker" href="#">
+                <i class="nova-search"></i>
+              </a>
+
+              <form id="headerSearchForm" class="header-search input-group w-xl-31_25rem mr-2" action="#">
+                <input class="js-autocomplete header-search-input form-control pr-6" type="text" placeholder="Search..."
+                       data-url="../assets/include/json/autocomplete-data.json">
+                <div class="input-group-append">
+                  <a class="btn text-muted bg-transparent border-0 p-0 lh-1" href="#">
+                    <i class="nova-search icon-text icon-text-lg"></i>
+                  </a>
+                </div>
+              </form>
+            </div>
+
+            <a class="link-dark ml-auto" href="../../demo-crypto/dashboards/">
+              Live <span class="d-none d-md-inline"> Preview</span>
+            </a>
+
+            <div class="dropdown mx-3 mx-md-4">
+              <a id="versionMenuInvoker" class="header-complex-invoker d-flex align-items-center" href="#" title="Changelog" aria-controls="versionMenu" aria-haspopup="true" aria-expanded="false"
+                 data-unfold-event="click"
+                 data-unfold-target="#versionMenu"
+                 data-unfold-type="css-animation"
+                 data-unfold-duration="300"
+                 data-unfold-animation-in="fadeIn"
+                 data-unfold-animation-out="fadeOut">
+                v1.0
+                <i class="nova-angle-down d-none d-md-block ml-2"></i>
+              </a>
+
+              <ul id="versionMenu" class="unfold unfold-user unfold-light unfold-top unfold-centered position-absolute rounded py-2 mt-4"
+                  aria-labelledby="versionMenuInvoker">
+                <li class="unfold-item">
+                  <a class="unfold-link" href="../getting-started/changelog.html">v1.0</a>
+                </li>
+              </ul>
+            </div>
+
+            <a class="btn btn-primary mr-2" href="../../ui-components/widgets.html" title="UI Kit Components">UI Kit <span class="d-none d-md-inline">Components</span></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!-- Sidebar Nav -->
+      <aside id="sidebar" class="js-custom-scroll side-nav">
+        <ul id="sideNav" class="side-nav-menu side-nav-menu-top-level mb-0">
+          <li class="sidebar-heading h6 text-uppercase">Getting Started</li>
+          <li><a class="side-nav-menu-link py-1" href="../index.html">Introduction</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/file-structures.html">File Structures</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/approach.html">Approach</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/gulp.html">Gulp</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/customization.html">Customization</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/credits.html">Credits</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/changelog.html">Changelog</a></li>
+
+
+          <li class="sidebar-heading h6 text-uppercase">Components</li>
+          <li><a class="side-nav-menu-link py-1" href="../components/typography.html">Typography</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/alerts.html">Alerts</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/avatars.html">Avatars</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/badges-indicators.html">Badges &amp; Indicators</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/breadcrumb.html">Breadcrumb</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/buttons.html">Buttons</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/cards.html">Cards</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/collapse.html">Collapse</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/dropdowns.html">Dropdowns</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/forms.html">Forms</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/icons.html">Icons</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/modal.html">Modal</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/navs.html">Navs</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/pagination.html">Pagination</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/progress.html">Progress</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/spinners.html">Spinners</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/tables.html">Tables</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/toasts.html">Toasts</a></li>
+
+
+          <li class="sidebar-heading h6 text-uppercase">Libraries</li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/animations.html">Animations</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/autocomplete.html">Autocomplete</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/chartist.html">Chartist.js</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/clipboard.html">Clipboard</a></li>
+          <li><a class="side-nav-menu-link py-1 active" href="../libraries/datatables.html">Datatables</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/file-attach.html">File Attach</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/flatpickr.html">Flatpickr</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/google-geo-chart.html">Google Geo Chart</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/header-search.html">Header Search</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/malihu-scrollbar.html">Malihu Scrollbar</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/masked-input.html">Masked Input</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/select2.html">Select2</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/side-nav.html">Sidebar Navigation</a></li>
+          <!-- <li><a class="side-nav-menu-link py-1" href="../libraries/step-form.html">Step Form</a></li> -->
+          <li><a class="side-nav-menu-link py-1" href="../libraries/tabs.html">Tabs</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/unfold.html">Unfold</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/validation.html">Validation</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/visavail-timeline.html">Visavail Timeline</a></li>
+
+          <li class="sidebar-heading h6 text-uppercase">Utilities</li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/background.html">Background</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/borders.html">Borders</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/colors.html">Colors</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/links.html">Links</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/positions.html">Positions</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/spacing.html">Spacing</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/transitions.html">Transitions</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/others.html">Others</a></li>
+        </ul>
+      </aside>
+      <!-- End Sidebar Nav -->
+
+      <div class="content overflow-inherit">
+        <div class="hs-docs-content py-4 px-3 px-md-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block">
+                  <ul id="scrollNav" class="hs-docs-content-nav">
+                    <li class="hs-docs-content-nav-item active"><a href="#how-to-use">How to use?</a></li>
+                    <li class="hs-docs-content-nav-item"><a href="#basic-example">Basic example</a></li>
+                    <li class="hs-docs-content-nav-item"><a href="#with-pagination">With pagination</a></li>
+                    <li class="hs-docs-content-nav-item"><a href="#with-search">With search</a></li>
+                    <li class="hs-docs-content-nav-item">
+                      <a href="#js-behavior">JavaScript behavior</a>
+                      <ul>
+                        <li class="hs-docs-content-nav-item"><a href="#methods">Methods</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-xl-10 order-xl-1">
+                  <div class="border-bottom pb-3 mb-6">
+                    <h1 class="h3 mb-3 mb-md-4">Datatables</h1>
+                    <p class="lead">Showcase your latest works with a a jQuery grid plugin that provides powerful portfolio system, beautiful animated filtering or any other ordered grid content.</p>
+                  </div>
+
+                  <div class="alert alert-warning mb-5" role="alert">
+                    <h3 class="h6 font-weight-bold">Official documentation</h3>
+                    <p class="alert-text mb-0">For more detailed information and examples, see the official documentation: <a href="https://datatables.net/">Datatables</a>.</p>
+                  </div>
+
+                  <div id="how-to-use" class="mb-9">
+                    <h2 class="h4">How to use? <a class="anchorjs-link" href="#how-to-use" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                    <p>To add <code>hs.datatables.js</code> in your page, wrap any block in a parent element with an ID or class and add the same ID or the class in the JS init function of the plugin.</p>
+
+                    <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Implementing Plugins</u></em> to enable it.</p>
+
+                    <pre>
+            <code class="language-html" data-lang="html">
+              &lt;script src="../../assets/vendor/datatables/media/js/jquery.dataTables.min.js"&gt;&lt;/script&gt;
+            </code>
+          </pre>
+
+                    <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Nova</u></em> to enable it.</p>
+
+          <pre>
+            <code class="language-html" data-lang="html">
+              &lt;script src="../../assets/js/components/hs.datatables.js"&gt;&lt;/script&gt;
+            </code>
+          </pre>
+
+                    <p>Copy-paste the init function under <em><u>JS Plugins Init.</u></em>, before the closing <code>&lt;/body&gt;</code> tag, to enable it.</p>
+
+                    <pre>
+            <code class="language-html" data-lang="html">
+              &lt;script&gt;
+                $(document).on('ready', function () {
+                  // initialization of datatables
+                  $.HSCore.components.HSDatatables.init('.js-datatable');
+                });
+              &lt;/script&gt;
+            </code>
+          </pre>
+                  </div>
+
+                  <div id="basic-example" class="mb-9">
+                    <h2 class="h4">Basic example <a class="anchorjs-link" href="#basic-example" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+                    <div class="mb-3">
+                      <!-- Nav Classic -->
+                      <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="pills-tab-1" role="tablist">
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3 active" id="pills-result-tab-1" data-toggle="pill" href="#pills-result-1" role="tab" aria-controls="pills-result-1" aria-selected="true">Result</a>
+                        </li>
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-html-tab-1" data-toggle="pill" href="#pills-html-1" role="tab" aria-controls="pills-html-1" aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- End Nav Classic -->
+
+                      <!-- Tab Content -->
+                      <div class="tab-content bg-lighter" id="pills-tabContent-1">
+                        <div class="tab-pane fade p-4 show active" id="pills-result-1" role="tabpanel" aria-labelledby="pills-result-tab-1">
+                          <div class="table-responsive-md">
+                            <table class="js-datatable table bg-white mb-5">
+                              <thead>
+                                <tr>
+                                  <th scope="col" class="font-weight-semi-bold border-top-0 py-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      #
+                                      <div class="ml-2">
+                                        <i class="nova-arrow-down icon-text icon-text-xs"></i>
+                                        <i class="nova-arrow-up icon-text icon-text-xs"></i>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  <th scope="col" class="font-weight-semi-bold border-top-0 py-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      First
+                                      <div class="ml-2">
+                                        <i class="nova-arrow-down icon-text icon-text-xs"></i>
+                                        <i class="nova-arrow-up icon-text icon-text-xs"></i>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  <th scope="col" class="font-weight-semi-bold border-top-0 py-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      Last
+                                      <div class="ml-2">
+                                        <i class="nova-arrow-down icon-text icon-text-xs"></i>
+                                        <i class="nova-arrow-up icon-text icon-text-xs"></i>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  <th scope="col" class="font-weight-semi-bold border-top-0 py-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      Handle
+                                      <div class="ml-2">
+                                        <i class="nova-arrow-down icon-text icon-text-xs"></i>
+                                        <i class="nova-arrow-up icon-text icon-text-xs"></i>
+                                      </div>
+                                    </div>
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody class="font-size-1">
+                                <tr>
+                                  <td>1</td>
+                                  <td>Mark</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                  <td>2</td>
+                                  <td>Jacob</td>
+                                  <td>Thornton</td>
+                                  <td>@fat</td>
+                                </tr>
+                                <tr>
+                                  <td>3</td>
+                                  <td>Larry</td>
+                                  <td>the Bird</td>
+                                  <td>@ftwitterat</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-html-1" role="tabpanel" aria-labelledby="pills-html-tab-1">
+                <pre>
+                  <code class="language-markup" data-lang="html">
+                    &lt;div class="table-responsive-md"&gt;
+                      &lt;table class="js-datatable table bg-white mb-5"&gt;
+                        &lt;thead&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="col" class="font-weight-semi-bold border-top-0 py-2"&gt;
+                              &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                                #
+                                &lt;div class="ml-2"&gt;
+                                  &lt;i class="nova-arrow-down icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                  &lt;i class="nova-arrow-up icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/th&gt;
+                            &lt;th scope="col" class="font-weight-semi-bold border-top-0 py-2"&gt;
+                              &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                                First
+                                &lt;div class="ml-2"&gt;
+                                  &lt;i class="nova-arrow-down icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                  &lt;i class="nova-arrow-up icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/th&gt;
+                            &lt;th scope="col" class="font-weight-semi-bold border-top-0 py-2"&gt;
+                              &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                                Last
+                                &lt;div class="ml-2"&gt;
+                                  &lt;i class="nova-arrow-down icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                  &lt;i class="nova-arrow-up icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/th&gt;
+                            &lt;th scope="col" class="font-weight-semi-bold border-top-0 py-2"&gt;
+                              &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                                Handle
+                                &lt;div class="ml-2"&gt;
+                                  &lt;i class="nova-arrow-down icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                  &lt;i class="nova-arrow-up icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/th&gt;
+                          &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody class="font-size-1"&gt;
+                          &lt;tr&gt;
+                            &lt;td&gt;1&lt;/td&gt;
+                            &lt;td&gt;Mark&lt;/td&gt;
+                            &lt;td&gt;Otto&lt;/td&gt;
+                            &lt;td&gt;@mdo&lt;/td&gt;
+                          &lt;/tr&gt;
+                          &lt;tr&gt;
+                            &lt;td&gt;2&lt;/td&gt;
+                            &lt;td&gt;Jacob&lt;/td&gt;
+                            &lt;td&gt;Thornton&lt;/td&gt;
+                            &lt;td&gt;@fat&lt;/td&gt;
+                          &lt;/tr&gt;
+                          &lt;tr&gt;
+                            &lt;td&gt;3&lt;/td&gt;
+                            &lt;td&gt;Larry&lt;/td&gt;
+                            &lt;td&gt;the Bird&lt;/td&gt;
+                            &lt;td&gt;@ftwitterat&lt;/td&gt;
+                          &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                      &lt;/table&gt;
+                    &lt;/div&gt;
+                  </code>
+                </pre>
+                        </div>
+                      </div>
+                      <!-- End Tab Content -->
+                    </div>
+                  </div>
+
+                  <div id="with-pagination" class="mb-9">
+                    <h2 class="h4">With pagination <a class="anchorjs-link" href="#with-pagination" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+                    <div class="mb-3">
+                      <!-- Nav Classic -->
+                      <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="pills-tab-2" role="tablist">
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3 active" id="pills-result-tab-2" data-toggle="pill" href="#pills-result-2" role="tab" aria-controls="pills-result-2" aria-selected="true">Result</a>
+                        </li>
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-html-tab-2" data-toggle="pill" href="#pills-html-2" role="tab" aria-controls="pills-html-2" aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- End Nav Classic -->
+
+                      <!-- Tab Content -->
+                      <div class="tab-content bg-lighter" id="pills-tabContent-2">
+                        <div class="tab-pane fade p-4 show active" id="pills-result-2" role="tabpanel" aria-labelledby="pills-result-tab-2">
+                          <div class="table-responsive-md">
+                            <table class="js-datatable table bg-white mb-5"
+                                   data-dt-info="#datatableWithPaginationInfo"
+                                   data-dt-page-length="4"
+                                   data-dt-is-show-paging="true"
+
+                                   data-dt-pagination="datatablePagination"
+                                   data-dt-pagination-classes="pagination mb-0"
+                                   data-dt-pagination-items-classes="page-item"
+                                   data-dt-pagination-links-classes="page-link"
+
+                                   data-dt-pagination-next-classes="page-item"
+                                   data-dt-pagination-next-link-classes="page-link"
+                                   data-dt-pagination-next-link-markup='<span aria-hidden="true">&raquo;</span>'
+
+                                   data-dt-pagination-prev-classes="page-item"
+                                   data-dt-pagination-prev-link-classes="page-link"
+                                   data-dt-pagination-prev-link-markup='<span aria-hidden="true">&laquo;</span>'>
+                              <thead>
+                                <tr>
+                                  <th scope="col" class="font-weight-semi-bold border-top-0 py-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      #
+                                      <div class="ml-2">
+                                        <i class="nova-arrow-down icon-text icon-text-xs"></i>
+                                        <i class="nova-arrow-up icon-text icon-text-xs"></i>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  <th scope="col" class="font-weight-semi-bold border-top-0 py-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      Column
+                                      <div class="ml-2">
+                                        <i class="nova-arrow-down icon-text icon-text-xs"></i>
+                                        <i class="nova-arrow-up icon-text icon-text-xs"></i>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  <th scope="col" class="font-weight-semi-bold border-top-0 py-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      Column
+                                      <div class="ml-2">
+                                        <i class="nova-arrow-down icon-text icon-text-xs"></i>
+                                        <i class="nova-arrow-up icon-text icon-text-xs"></i>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  <th scope="col" class="font-weight-semi-bold border-top-0 py-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      Column
+                                      <div class="ml-2">
+                                        <i class="nova-arrow-down icon-text icon-text-xs"></i>
+                                        <i class="nova-arrow-up icon-text icon-text-xs"></i>
+                                      </div>
+                                    </div>
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>01</td>
+                                  <td>Spotify</td>
+                                  <td>$9.00</td>
+                                  <td>Rejected</td>
+                                </tr>
+
+                                <tr>
+                                  <td>02</td>
+                                  <td>Dropbox</td>
+                                  <td>$257.93</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>03</td>
+                                  <td>Google</td>
+                                  <td>$441.99</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>04</td>
+                                  <td>NovaApp</td>
+                                  <td>$99.00</td>
+                                  <td>Pending</td>
+                                </tr>
+
+                                <tr>
+                                  <td>05</td>
+                                  <td>Slack</td>
+                                  <td>$14.89</td>
+                                  <td>Rejected</td>
+                                </tr>
+
+                                <tr>
+                                  <td>06</td>
+                                  <td>Spotify</td>
+                                  <td>$9.00</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>07</td>
+                                  <td>Htmlstream</td>
+                                  <td>$1,579.99</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>08</td>
+                                  <td>GitHub</td>
+                                  <td>$235.85</td>
+                                  <td>Rejected</td>
+                                </tr>
+
+                                <tr>
+                                  <td>09</td>
+                                  <td>Dropbox</td>
+                                  <td>$12.31</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>010</td>
+                                  <td>Google</td>
+                                  <td>$891.00</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>011</td>
+                                  <td>Atlassian</td>
+                                  <td>$321.11</td>
+                                  <td>Pending</td>
+                                </tr>
+
+                                <tr>
+                                  <td>012</td>
+                                  <td>Slack</td>
+                                  <td>$16.29</td>
+                                  <td>Rejected</td>
+                                </tr>
+
+                                <tr>
+                                  <td>013</td>
+                                  <td>Spotify</td>
+                                  <td>$4.00</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>014</td>
+                                  <td>Htmlstream</td>
+                                  <td>$3,462.00</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>015</td>
+                                  <td>Spotify</td>
+                                  <td>$9.00</td>
+                                  <td>Rejected</td>
+                                </tr>
+
+                                <tr>
+                                  <td>016</td>
+                                  <td>Dropbox</td>
+                                  <td>$196.73</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>017</td>
+                                  <td>Google</td>
+                                  <td>$235.99</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>018</td>
+                                  <td>NovaApp</td>
+                                  <td>$34.00</td>
+                                  <td>Pending</td>
+                                </tr>
+
+                                <tr>
+                                  <td>019</td>
+                                  <td>Slack</td>
+                                  <td>$72.89</td>
+                                  <td>Rejected</td>
+                                </tr>
+
+                                <tr>
+                                  <td>020</td>
+                                  <td>Spotify</td>
+                                  <td>$9.00</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>021</td>
+                                  <td>Htmlstream</td>
+                                  <td>$7,485.00</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>022</td>
+                                  <td>Slack</td>
+                                  <td>$76.00</td>
+                                  <td>Rejected</td>
+                                </tr>
+
+                                <tr>
+                                  <td>023</td>
+                                  <td>Spotify</td>
+                                  <td>$12.00</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>024</td>
+                                  <td>Htmlstream</td>
+                                  <td>$87.43</td>
+                                  <td>Completed</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <!-- Pagination -->
+                          <div class="d-flex justify-content-between align-items-center">
+                            <nav id="datatablePagination" aria-label="Activity pagination"></nav>
+
+                            <small id="datatableInfo"></small>
+                          </div>
+                          <!-- End Pagination -->
+                        </div>
+                        <div class="tab-pane fade" id="pills-html-2" role="tabpanel" aria-labelledby="pills-html-tab-2">
+                <pre>
+                  <code class="language-markup" data-lang="html">
+                    &lt;div class="table-responsive-md"&gt;
+                      &lt;table class="js-datatable table bg-white mb-5"
+                             data-dt-info="#datatableWithPaginationInfo"
+                             data-dt-page-length="4"
+                             data-dt-is-show-paging="true"
+
+                             data-dt-pagination="datatablePagination"
+                             data-dt-pagination-classes="pagination mb-0"
+                             data-dt-pagination-items-classes="page-item"
+                             data-dt-pagination-links-classes="page-link"
+
+                             data-dt-pagination-next-classes="page-item"
+                             data-dt-pagination-next-link-classes="page-link"
+                             data-dt-pagination-next-link-markup='&lt;span aria-hidden="true"&gt;&raquo;&lt;/span&gt;'
+
+                             data-dt-pagination-prev-classes="page-item"
+                             data-dt-pagination-prev-link-classes="page-link"
+                             data-dt-pagination-prev-link-markup='&lt;span aria-hidden="true"&gt;&laquo;&lt;/span&gt;'&gt;
+                        &lt;thead&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="col" class="font-weight-semi-bold border-top-0 py-2"&gt;
+                              &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                                #
+                                &lt;div class="ml-2"&gt;
+                                  &lt;i class="nova-arrow-down icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                  &lt;i class="nova-arrow-up icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/th&gt;
+                            &lt;th scope="col" class="font-weight-semi-bold border-top-0 py-2"&gt;
+                              &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                                Column
+                                &lt;div class="ml-2"&gt;
+                                  &lt;i class="nova-arrow-down icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                  &lt;i class="nova-arrow-up icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/th&gt;
+                            &lt;th scope="col" class="font-weight-semi-bold border-top-0 py-2"&gt;
+                              &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                                Column
+                                &lt;div class="ml-2"&gt;
+                                  &lt;i class="nova-arrow-down icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                  &lt;i class="nova-arrow-up icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/th&gt;
+                            &lt;th scope="col" class="font-weight-semi-bold border-top-0 py-2"&gt;
+                              &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                                Column
+                                &lt;div class="ml-2"&gt;
+                                  &lt;i class="nova-arrow-down icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                  &lt;i class="nova-arrow-up icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/th&gt;
+                          &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody&gt;
+                          &lt;tr&gt;
+                            &lt;td&gt;01&lt;/td&gt;
+                            &lt;td&gt;Spotify&lt;/td&gt;
+                            &lt;td&gt;$9.00&lt;/td&gt;
+                            &lt;td&gt;Rejected&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;02&lt;/td&gt;
+                            &lt;td&gt;Dropbox&lt;/td&gt;
+                            &lt;td&gt;$257.93&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;03&lt;/td&gt;
+                            &lt;td&gt;Google&lt;/td&gt;
+                            &lt;td&gt;$441.99&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;04&lt;/td&gt;
+                            &lt;td&gt;NovaApp&lt;/td&gt;
+                            &lt;td&gt;$99.00&lt;/td&gt;
+                            &lt;td&gt;Pending&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;05&lt;/td&gt;
+                            &lt;td&gt;Slack&lt;/td&gt;
+                            &lt;td&gt;$14.89&lt;/td&gt;
+                            &lt;td&gt;Rejected&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;06&lt;/td&gt;
+                            &lt;td&gt;Spotify&lt;/td&gt;
+                            &lt;td&gt;$9.00&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;07&lt;/td&gt;
+                            &lt;td&gt;Htmlstream&lt;/td&gt;
+                            &lt;td&gt;$1,579.99&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;08&lt;/td&gt;
+                            &lt;td&gt;GitHub&lt;/td&gt;
+                            &lt;td&gt;$235.85&lt;/td&gt;
+                            &lt;td&gt;Rejected&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;09&lt;/td&gt;
+                            &lt;td&gt;Dropbox&lt;/td&gt;
+                            &lt;td&gt;$12.31&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;010&lt;/td&gt;
+                            &lt;td&gt;Google&lt;/td&gt;
+                            &lt;td&gt;$891.00&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;011&lt;/td&gt;
+                            &lt;td&gt;Atlassian&lt;/td&gt;
+                            &lt;td&gt;$321.11&lt;/td&gt;
+                            &lt;td&gt;Pending&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;012&lt;/td&gt;
+                            &lt;td&gt;Slack&lt;/td&gt;
+                            &lt;td&gt;$16.29&lt;/td&gt;
+                            &lt;td&gt;Rejected&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;013&lt;/td&gt;
+                            &lt;td&gt;Spotify&lt;/td&gt;
+                            &lt;td&gt;$4.00&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;014&lt;/td&gt;
+                            &lt;td&gt;Htmlstream&lt;/td&gt;
+                            &lt;td&gt;$3,462.00&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;015&lt;/td&gt;
+                            &lt;td&gt;Spotify&lt;/td&gt;
+                            &lt;td&gt;$9.00&lt;/td&gt;
+                            &lt;td&gt;Rejected&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;016&lt;/td&gt;
+                            &lt;td&gt;Dropbox&lt;/td&gt;
+                            &lt;td&gt;$196.73&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;017&lt;/td&gt;
+                            &lt;td&gt;Google&lt;/td&gt;
+                            &lt;td&gt;$235.99&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;018&lt;/td&gt;
+                            &lt;td&gt;NovaApp&lt;/td&gt;
+                            &lt;td&gt;$34.00&lt;/td&gt;
+                            &lt;td&gt;Pending&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;019&lt;/td&gt;
+                            &lt;td&gt;Slack&lt;/td&gt;
+                            &lt;td&gt;$72.89&lt;/td&gt;
+                            &lt;td&gt;Rejected&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;020&lt;/td&gt;
+                            &lt;td&gt;Spotify&lt;/td&gt;
+                            &lt;td&gt;$9.00&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;021&lt;/td&gt;
+                            &lt;td&gt;Htmlstream&lt;/td&gt;
+                            &lt;td&gt;$7,485.00&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;022&lt;/td&gt;
+                            &lt;td&gt;Slack&lt;/td&gt;
+                            &lt;td&gt;$76.00&lt;/td&gt;
+                            &lt;td&gt;Rejected&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;023&lt;/td&gt;
+                            &lt;td&gt;Spotify&lt;/td&gt;
+                            &lt;td&gt;$12.00&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;024&lt;/td&gt;
+                            &lt;td&gt;Htmlstream&lt;/td&gt;
+                            &lt;td&gt;$87.43&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                      &lt;/table&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Pagination --&gt;
+                    &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                      &lt;nav id="datatablePagination" aria-label="Activity pagination"&gt;&lt;/nav&gt;
+
+                      &lt;small id="datatableInfo" class="text-secondary"&gt;&lt;/small&gt;
+                    &lt;/div&gt;
+                    &lt;!-- End Pagination --&gt;
+                  </code>
+                </pre>
+                        </div>
+                      </div>
+                      <!-- End Tab Content -->
+                    </div>
+                  </div>
+
+                  <div id="with-search" class="mb-9">
+                    <h2 class="h4">With search <a class="anchorjs-link" href="#with-search" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+                    <div class="mb-3">
+                      <!-- Nav Classic -->
+                      <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="pills-tab-3" role="tablist">
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3 active" id="pills-result-tab-3" data-toggle="pill" href="#pills-result-3" role="tab" aria-controls="pills-result-3" aria-selected="true">Result</a>
+                        </li>
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-html-tab-3" data-toggle="pill" href="#pills-html-3" role="tab" aria-controls="pills-html-3" aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- End Nav Classic -->
+
+                      <!-- Tab Content -->
+                      <div class="tab-content bg-lighter" id="pills-tabContent-3">
+                        <div class="tab-pane fade p-4 show active" id="pills-result-3" role="tabpanel" aria-labelledby="pills-result-tab-3">
+                          <!-- Search -->
+                          <div class="js-focus-state input-group mb-4">
+                            <input id="datatableSearch" class="form-control bg-white border-0 pr-6" placeholder="Enter search term" type="text">
+                            <div class="input-group-append">
+                              <a class="text-muted" href="#">
+                                <i class="nova-search"></i>
+                              </a>
+                            </div>
+                          </div>
+                          <!-- End Search -->
+
+                          <div class="table-responsive-md">
+                            <table class="js-datatable table bg-white mb-5"
+                                   data-dt-info="#datatableInfo"
+                                   data-dt-search="#datatableSearch"
+                                   data-dt-entries="#datatableEntries"
+                                   data-dt-page-length="7"
+                                   data-dt-is-responsive="false"
+                                   data-dt-is-show-paging="true"
+                                   data-dt-details-invoker=".js-datatabale-details"
+                                   data-dt-select-all-control="#invoiceToggleAllCheckbox">
+                              <thead>
+                                <tr>
+                                  <th scope="col" class="font-weight-semi-bold border-top-0 py-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      #
+                                      <div class="ml-2">
+                                        <i class="nova-arrow-down icon-text icon-text-xs"></i>
+                                        <i class="nova-arrow-up icon-text icon-text-xs"></i>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  <th scope="col" class="font-weight-semi-bold border-top-0 py-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      Column
+                                      <div class="ml-2">
+                                        <i class="nova-arrow-down icon-text icon-text-xs"></i>
+                                        <i class="nova-arrow-up icon-text icon-text-xs"></i>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  <th scope="col" class="font-weight-semi-bold border-top-0 py-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      Column
+                                      <div class="ml-2">
+                                        <i class="nova-arrow-down icon-text icon-text-xs"></i>
+                                        <i class="nova-arrow-up icon-text icon-text-xs"></i>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  <th scope="col" class="font-weight-semi-bold border-top-0 py-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      Column
+                                      <div class="ml-2">
+                                        <i class="nova-arrow-down icon-text icon-text-xs"></i>
+                                        <i class="nova-arrow-up icon-text icon-text-xs"></i>
+                                      </div>
+                                    </div>
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>001</td>
+                                  <td>Spotify</td>
+                                  <td>$9.00</td>
+                                  <td>Rejected</td>
+                                </tr>
+
+                                <tr>
+                                  <td>002</td>
+                                  <td>Dropbox</td>
+                                  <td>$257.93</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>003</td>
+                                  <td>Google</td>
+                                  <td>$441.99</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>004</td>
+                                  <td>NovaApp</td>
+                                  <td>$99.00</td>
+                                  <td>Pending</td>
+                                </tr>
+
+                                <tr>
+                                  <td>005</td>
+                                  <td>Slack</td>
+                                  <td>$14.89</td>
+                                  <td>Rejected</td>
+                                </tr>
+
+                                <tr>
+                                  <td>006</td>
+                                  <td>Spotify</td>
+                                  <td>$9.00</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>007</td>
+                                  <td>Htmlstream</td>
+                                  <td>$1,579.99</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>008</td>
+                                  <td>GitHub</td>
+                                  <td>$235.85</td>
+                                  <td>Rejected</td>
+                                </tr>
+
+                                <tr>
+                                  <td>009</td>
+                                  <td>Dropbox</td>
+                                  <td>$12.31</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>0010</td>
+                                  <td>Google</td>
+                                  <td>$891.00</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>0011</td>
+                                  <td>Atlassian</td>
+                                  <td>$321.11</td>
+                                  <td>Pending</td>
+                                </tr>
+
+                                <tr>
+                                  <td>0012</td>
+                                  <td>Slack</td>
+                                  <td>$16.29</td>
+                                  <td>Rejected</td>
+                                </tr>
+
+                                <tr>
+                                  <td>0013</td>
+                                  <td>Spotify</td>
+                                  <td>$4.00</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>0014</td>
+                                  <td>Htmlstream</td>
+                                  <td>$3,462.00</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>0015</td>
+                                  <td>Spotify</td>
+                                  <td>$9.00</td>
+                                  <td>Rejected</td>
+                                </tr>
+
+                                <tr>
+                                  <td>0016</td>
+                                  <td>Dropbox</td>
+                                  <td>$196.73</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>0017</td>
+                                  <td>Google</td>
+                                  <td>$235.99</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>0018</td>
+                                  <td>NovaApp</td>
+                                  <td>$34.00</td>
+                                  <td>Pending</td>
+                                </tr>
+
+                                <tr>
+                                  <td>0019</td>
+                                  <td>Slack</td>
+                                  <td>$72.89</td>
+                                  <td>Rejected</td>
+                                </tr>
+
+                                <tr>
+                                  <td>0020</td>
+                                  <td>Spotify</td>
+                                  <td>$9.00</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>0021</td>
+                                  <td>Htmlstream</td>
+                                  <td>$7,485.00</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>0022</td>
+                                  <td>Slack</td>
+                                  <td>$76.00</td>
+                                  <td>Rejected</td>
+                                </tr>
+
+                                <tr>
+                                  <td>0023</td>
+                                  <td>Spotify</td>
+                                  <td>$12.00</td>
+                                  <td>Completed</td>
+                                </tr>
+
+                                <tr>
+                                  <td>0024</td>
+                                  <td>Htmlstream</td>
+                                  <td>$87.43</td>
+                                  <td>Completed</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-html-3" role="tabpanel" aria-labelledby="pills-html-tab-3">
+                <pre>
+                  <code class="language-markup" data-lang="html">
+                    &lt;!-- Search --&gt;
+                    &lt;div class="js-focus-state input-group mb-4"&gt;
+                      &lt;input id="datatableSearch" class="form-control bg-white border-0 pr-6" placeholder="Enter search term" type="text"&gt;
+                      &lt;div class="input-group-append"&gt;
+                        &lt;a class="text-muted" href="#"&gt;
+                          &lt;i class="nova-search"&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;!-- End Search --&gt;
+
+                    &lt;div class="table-responsive-md"&gt;
+                      &lt;table class="js-datatable table bg-white mb-5"
+                             data-dt-info="#datatableInfo"
+                             data-dt-search="#datatableSearch"
+                             data-dt-entries="#datatableEntries"
+                             data-dt-page-length="7"
+                             data-dt-is-responsive="false"
+                             data-dt-is-show-paging="true"
+                             data-dt-details-invoker=".js-datatabale-details"
+                             data-dt-select-all-control="#invoiceToggleAllCheckbox"&gt;
+                        &lt;thead&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="col" class="font-weight-semi-bold border-top-0 py-2"&gt;
+                              &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                                #
+                                &lt;div class="ml-2"&gt;
+                                  &lt;i class="nova-arrow-down icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                  &lt;i class="nova-arrow-up icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/th&gt;
+                            &lt;th scope="col" class="font-weight-semi-bold border-top-0 py-2"&gt;
+                              &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                                Column
+                                &lt;div class="ml-2"&gt;
+                                  &lt;i class="nova-arrow-down icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                  &lt;i class="nova-arrow-up icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/th&gt;
+                            &lt;th scope="col" class="font-weight-semi-bold border-top-0 py-2"&gt;
+                              &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                                Column
+                                &lt;div class="ml-2"&gt;
+                                  &lt;i class="nova-arrow-down icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                  &lt;i class="nova-arrow-up icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/th&gt;
+                            &lt;th scope="col" class="font-weight-semi-bold border-top-0 py-2"&gt;
+                              &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                                Column
+                                &lt;div class="ml-2"&gt;
+                                  &lt;i class="nova-arrow-down icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                  &lt;i class="nova-arrow-up icon-text icon-text-xs"&gt;&lt;/i&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/th&gt;
+                          &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody&gt;
+                          &lt;tr&gt;
+                            &lt;td&gt;001&lt;/td&gt;
+                            &lt;td&gt;Spotify&lt;/td&gt;
+                            &lt;td&gt;$9.00&lt;/td&gt;
+                            &lt;td&gt;Rejected&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;002&lt;/td&gt;
+                            &lt;td&gt;Dropbox&lt;/td&gt;
+                            &lt;td&gt;$257.93&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;003&lt;/td&gt;
+                            &lt;td&gt;Google&lt;/td&gt;
+                            &lt;td&gt;$441.99&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;004&lt;/td&gt;
+                            &lt;td&gt;NovaApp&lt;/td&gt;
+                            &lt;td&gt;$99.00&lt;/td&gt;
+                            &lt;td&gt;Pending&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;005&lt;/td&gt;
+                            &lt;td&gt;Slack&lt;/td&gt;
+                            &lt;td&gt;$14.89&lt;/td&gt;
+                            &lt;td&gt;Rejected&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;006&lt;/td&gt;
+                            &lt;td&gt;Spotify&lt;/td&gt;
+                            &lt;td&gt;$9.00&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;007&lt;/td&gt;
+                            &lt;td&gt;Htmlstream&lt;/td&gt;
+                            &lt;td&gt;$1,579.99&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;008&lt;/td&gt;
+                            &lt;td&gt;GitHub&lt;/td&gt;
+                            &lt;td&gt;$235.85&lt;/td&gt;
+                            &lt;td&gt;Rejected&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;009&lt;/td&gt;
+                            &lt;td&gt;Dropbox&lt;/td&gt;
+                            &lt;td&gt;$12.31&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;0010&lt;/td&gt;
+                            &lt;td&gt;Google&lt;/td&gt;
+                            &lt;td&gt;$891.00&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;0011&lt;/td&gt;
+                            &lt;td&gt;Atlassian&lt;/td&gt;
+                            &lt;td&gt;$321.11&lt;/td&gt;
+                            &lt;td&gt;Pending&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;0012&lt;/td&gt;
+                            &lt;td&gt;Slack&lt;/td&gt;
+                            &lt;td&gt;$16.29&lt;/td&gt;
+                            &lt;td&gt;Rejected&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;0013&lt;/td&gt;
+                            &lt;td&gt;Spotify&lt;/td&gt;
+                            &lt;td&gt;$4.00&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;0014&lt;/td&gt;
+                            &lt;td&gt;Htmlstream&lt;/td&gt;
+                            &lt;td&gt;$3,462.00&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;0015&lt;/td&gt;
+                            &lt;td&gt;Spotify&lt;/td&gt;
+                            &lt;td&gt;$9.00&lt;/td&gt;
+                            &lt;td&gt;Rejected&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;0016&lt;/td&gt;
+                            &lt;td&gt;Dropbox&lt;/td&gt;
+                            &lt;td&gt;$196.73&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;0017&lt;/td&gt;
+                            &lt;td&gt;Google&lt;/td&gt;
+                            &lt;td&gt;$235.99&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;0018&lt;/td&gt;
+                            &lt;td&gt;NovaApp&lt;/td&gt;
+                            &lt;td&gt;$34.00&lt;/td&gt;
+                            &lt;td&gt;Pending&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;0019&lt;/td&gt;
+                            &lt;td&gt;Slack&lt;/td&gt;
+                            &lt;td&gt;$72.89&lt;/td&gt;
+                            &lt;td&gt;Rejected&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;0020&lt;/td&gt;
+                            &lt;td&gt;Spotify&lt;/td&gt;
+                            &lt;td&gt;$9.00&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;0021&lt;/td&gt;
+                            &lt;td&gt;Htmlstream&lt;/td&gt;
+                            &lt;td&gt;$7,485.00&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;0022&lt;/td&gt;
+                            &lt;td&gt;Slack&lt;/td&gt;
+                            &lt;td&gt;$76.00&lt;/td&gt;
+                            &lt;td&gt;Rejected&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;0023&lt;/td&gt;
+                            &lt;td&gt;Spotify&lt;/td&gt;
+                            &lt;td&gt;$12.00&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+
+                          &lt;tr&gt;
+                            &lt;td&gt;0024&lt;/td&gt;
+                            &lt;td&gt;Htmlstream&lt;/td&gt;
+                            &lt;td&gt;$87.43&lt;/td&gt;
+                            &lt;td&gt;Completed&lt;/td&gt;
+                          &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                      &lt;/table&gt;
+                    &lt;/div&gt;
+                  </code>
+                </pre>
+                        </div>
+                      </div>
+                      <!-- End Tab Content -->
+                    </div>
+                  </div>
+
+                  <div id="js-behavior" class="mb-5">
+                    <h2 class="h4">JavaScript behavior <a class="anchorjs-link" href="#js-behavior" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                  </div>
+
+                  <div id="methods" class="mb-9">
+                    <h2 class="h4">Methods <a class="anchorjs-link" href="#methods" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                    <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-dt-info=""</code>.</p>
+
+                    <table class="table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th style="width: 25%;">Attribute</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <p><code>data-dt-info</code></p>
+                          </td>
+                          <td>When this option is enabled, Datatables will show information about the table including information about filtered data if that action is being performed. This option allows that feature to be enabled or disabled.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><code>data-dt-search</code></p>
+                          </td>
+                          <td>The <code>search option</code> allows the way DataTables performs filtering to be set during the initialisation, and to set an initial global filter.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><code>data-dt-is-columns-search-thead-after</code></p>
+                          </td>
+                          <td>The <code>search option</code> allows the way DataTables performs filtering for <code>::after</code> pseudo within <code>thead</code> to be set during the initialisation, and to set an initial global filter.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><code>data-dt-entries</code></p>
+                          </td>
+                          <td>Shows how many entries to show.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><code>data-dt-pagination</code></p>
+                          </td>
+                          <td>The pagination option of DataTables will display a pagination control below the table (by default, its position can be changed using <code>dom</code> and CSS) with buttons that the end user can use to navigate the pages of the table. Which buttons are shown in the pagination control are defined by the option given here.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><code>data-dt-details-invoker</code></p>
+                          </td>
+                          <td>Column/selector for child row display control when using column details type. When the column type is selected for the <code>responsive.details.type option</code>, this option provides the ability to control what element in the table will activate the show / hide control in each row. This can be one of an column index, or a jQuery selector, as detailed below.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><code>data-dt-page-length</code></p>
+                          </td>
+                          <td>Number of rows to display on a single page when using pagination.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><code>data-dt-is-responsive</code></p>
+                          </td>
+                          <td>This option provides the ability to enable and configure Responsive for DataTables.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><code>data-dt-is-selectable</code></p>
+                          </td>
+                          <td>Set the element selector used for mouse event capture to select items.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><code>data-dt-is-columns-search</code></p>
+                          </td>
+                          <td>Using this parameter, you can defined if DataTables should include this column in the filterable data in the table. You may want use this option to display filtering on generated columns such as 'Edit' and 'Delete' buttons for example.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><code>data-dt-is-show-paging</code></p>
+                          </td>
+                          <td>DataTables can split the rows in tables into individual pages, which is an efficient method of showing a large number of records in a small space. The end user is provided with controls to request the display of different data as the navigate through the data. This feature is enabled by default, but if you wish to disable it, you may do so with this parameter.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><code>data-dt-scroll-height</code></p>
+                          </td>
+                          <td>Set the row height, or how the row height is calculated. It is important for Scroller to know the height of the rows in the DataTable so it can perform its virtual display calculations. All rows must be of the same height, and Scroller will attempt to automatically calculate the height of rows itself.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><code>data-dt-pagination-classes</code></p>
+                          </td>
+                          <td>A wrapping classes to identify the parent class for pagination.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><code>data-dt-pagination-items-classes</code></p>
+                          </td>
+                          <td>A wrapping classes to identify the item class for pagination.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><code>data-dt-pagination-links-classes</code></p>
+                          </td>
+                          <td>A wrapping classes to identify the link class for pagination.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><code>data-dt-pagination-next-classes</code></p>
+                          </td>
+                          <td>A wrapping classes to identify the next preview class for pagination.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><code>data-dt-pagination-next-link-classes</code></p>
+                          </td>
+                          <td>A wrapping classes to identify the next preview link class for pagination.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><code>data-dt-pagination-next-link-markup</code></p>
+                          </td>
+                          <td>A wrapping classes to identify the next preview link markup for pagination.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><code>data-dt-pagination-prev-classes</code></p>
+                          </td>
+                          <td>A wrapping classes to identify the previous preview class for pagination.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><code>data-dt-pagination-prev-link-classes</code></p>
+                          </td>
+                          <td>A wrapping classes to identify the previous preview link class for pagination.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><code>data-dt-pagination-prev-link-markup</code></p>
+                          </td>
+                          <td>A wrapping classes to identify the previous preview link markup for pagination.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="small bg-white p-3 px-md-4 mt-auto">
+          <div class="row justify-content-between">
+            <div class="col-lg text-center text-lg-left mb-3 mb-lg-0">
+              <ul class="list-dot list-inline mb-0">
+                <li class="list-dot-item list-dot-item-not list-inline-item mr-lg-2"><a class="link-dark" href="https://themes.getbootstrap.com/store/htmlstream/" target="_blank">Our products</a></li>
+                <li class="list-dot-item list-inline-item mr-lg-2"><a class="link-dark" href="https://htmlstream.com/contact-us" target="_blank">Contact us</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg text-center mb-3 mb-lg-0">
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://twitter.com/htmlstream" target="_blank" title="Twitter">
+                    <i class="nova-twitter-alt"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://www.facebook.com/htmlstream" target="_blank" title="Facebook">
+                    <i class="nova-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://github.com/htmlstream" target="_blank" title="Github">
+                    <i class="nova-github"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://dribbble.com/htmlstream" target="_blank" title="Dribbble">
+                    <i class="nova-dribbble"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://instagram.com/htmlstream" target="_blank" title="Instagram">
+                    <i class="nova-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg text-center text-lg-right">
+              &copy; 2019 <a class="link-dark" href="https://htmlstream.com" target="_blank">Htmlstream</a>. All Rights Reserved.
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <!-- JS Global Compulsory -->
+    <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../../assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="../../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <script src="../../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../assets/vendor/jquery-ui/jquery-ui.core.min.js"></script>
+    <script src="../../assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+    <script src="../../assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+    <script src="../../assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+    <script src="../../assets/vendor/resize-sensor/dist/resizeSensor.min.js"></script>
+    <script src="../assets/vendor/prism/prism.js"></script>
+    <script src="../../assets/vendor/datatables/media/js/jquery.dataTables.min.js"></script>
+
+    <!-- JS Nova -->
+    <script src="../../assets/js/hs.core.js"></script>
+    <script src="../../assets/js/components/hs.malihu-scrollbar.js"></script>
+    <script src="../../assets/js/components/hs.side-nav.js"></script>
+    <script src="../../assets/js/components/hs.unfold.js"></script>
+    <script src="../../assets/js/components/hs.header-search.js"></script>
+    <script src="../../assets/js/components/hs.autocomplete.js"></script>
+    <script src="../assets/js/components/hs.scroll-nav.js"></script>
+    <script src="../../assets/js/components/hs.datatables.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // initialization of malihu scrollbar
+        var $scrollbar = $('.js-custom-scroll');
+        $.HSCore.components.HSMalihuScrollBar.init($scrollbar);
+        $($scrollbar).mCustomScrollbar('scrollTo', '#sideNav li a.active');
+
+        // initialization of sidebar navigation component
+        $.HSCore.components.HSSideNav.init('.js-side-nav');
+
+        // initialization of unfold component
+        $.HSCore.components.HSUnfold.init($('[data-unfold-target]'));
+
+        // initialization of show on type module
+        $.HSCore.components.HSHeaderSearch.init('.js-header-search');
+
+        // initialization of autocomplete
+        $.HSCore.components.HSAutocomplete.init('.js-autocomplete');
+
+        // initialization of HSScrollNav component
+        $.HSCore.components.HSScrollNav.init($('#scrollNav'), {
+          duration: 700
+        });
+
+        // initialization of datatables
+        $.HSCore.components.HSDatatables.init('.js-datatable');
+      });
+    </script>
+  </body>
+</html>
